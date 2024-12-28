@@ -148,7 +148,7 @@ def check_weather():
     weather_desc = api_data['weather'][0]['description']
     hmdt = api_data['main']['humidity']
     wind_spd = api_data['wind']['speed']
-    date_time = datetime.datetime.now().strftime("%d %b %Y | %I:%M:%S %p")
+    date_time = datetime.now().strftime("%d %b %Y | %I:%M:%S %p")
     speak(f"{MASTER} the current weather is temperature {temp_city} degree celcius . is {weather_desc} having humidity {hmdt} and {wind_spd} at {date_time}")
 
 def translate_text(text, target_language):
